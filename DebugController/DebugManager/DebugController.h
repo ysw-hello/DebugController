@@ -5,7 +5,6 @@
 //  Created by 闫士伟 on 2018/7/30.
 //  Copyright © 2018年 com.ysw. All rights reserved.
 //
-
 /**
  eg:
  - (void)viewDidLoad {
@@ -25,24 +24,37 @@
  }
  
  - (void)pushDebuger {
- [self.navigationController pushViewController:[NSClassFromString(@"DebugController") new] animated:YES];
+ DebugController *debugVC = [DebugController new];
+ debugVC.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate rootViewController];//需传入承载的rootViewController
+ [self.navigationController pushViewController:debugVC animated:YES];
  }
  
  */
 
+
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, Debug_ModuleType) {
+    kDebug_ModuleType_SystemState, //系统状态开关
+    kDebug_ModuleType_SandBox, //本地沙盒目录
+    kDebug_ModuleType_DataFetch, //请求抓包开关
+};
+
+
 @interface DebugController : UIViewController
+@property (nonatomic, strong) UIViewController *rootViewController;
 
 @end
 
 @interface DebugCell : UITableViewCell
-
 @property (nonatomic, strong) NSString *title;
+
+@property (nonatomic, assign) Debug_ModuleType moduleType;
 
 @property (nonatomic, strong) UISwitch *debugSwitch;
 
-@property (nonatomic, assign) NSInteger index;//触发事件的cell_index
-
+@property (nonatomic, strong) UIViewController *rootViewController;
 
 @end
+
+

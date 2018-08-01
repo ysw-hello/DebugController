@@ -7,6 +7,8 @@
 //
 
 #import "TestViewController.h"
+#import "DebugController.h"
+#import "AppDelegate.h"
 
 @interface TestViewController ()
 
@@ -31,7 +33,9 @@
 }
 
 - (void)pushDebuger {
-    [self.navigationController pushViewController:[NSClassFromString(@"DebugController") new] animated:YES];
+    DebugController *debugVC = [DebugController new];
+    debugVC.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate rootViewController];
+    [self.navigationController pushViewController:debugVC animated:YES];
 }
 
 @end

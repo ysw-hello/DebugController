@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.title =  @"调试控制器";
-    self.titleArray = @[@"本地沙盒目录", @"系统状态开关"];
+    self.titleArray = @[@"系统状态开关", @"本地沙盒目录", @"请求抓包开关"];
     [self initTableView];
 }
 
@@ -51,10 +51,18 @@
     }
     switch (indexPath.row) {
         case 0:
-            cell.debugSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kUserDefaults_SandBoxKey_DebugSwitch];
-            break;
-        case 1:
             cell.debugSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kUserDefaults_SystemStateKey_DebugSwitch];
+            cell.moduleType = kDebug_ModuleType_SystemState;
+            break;
+
+        case 1:
+            cell.debugSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kUserDefaults_SandBoxKey_DebugSwitch];
+            cell.moduleType = kDebug_ModuleType_SandBox;
+            break;
+            
+        case 2:
+            cell.debugSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kUserDefaults_DataFetchKey_DebugSwitch];
+            cell.moduleType = kDebug_ModuleType_DataFetch;
             break;
 
         default:
@@ -62,8 +70,7 @@
             break;
     }
     cell.title = [_titleArray objectAtIndex:indexPath.row];
-    cell.index = indexPath.row;
-    
+    cell.rootViewController = self.rootViewController;
     return cell;
 }
 
@@ -78,7 +85,6 @@
 
 /*************************************  DebugCell  *******************************************/
 @interface DebugCell ()
-
 @property (nonatomic, strong) UILabel *titleLabel;
 
 @end
@@ -96,6 +102,13 @@
     return self;
 }
 
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    _titleLabel.text = _title;
+    [_titleLabel sizeToFit];
+    [self layoutIfNeeded];
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     _titleLabel.left = 10;
@@ -105,13 +118,14 @@
     _debugSwitch.centerY = _titleLabel.centerY;
     
 }
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - private SEL
 - (void)sandBoxListRemoved {
-    if (_index == 0) {
+    if (self.moduleType == kDebug_ModuleType_SandBox) {
      self.debugSwitch.on = NO;
     }
 }
@@ -125,36 +139,38 @@
     [self addSubview:_debugSwitch];
 }
 
-- (void)setTitle:(NSString *)title {
-    _title = title;
-    _titleLabel.text = _title;
-    [_titleLabel sizeToFit];
-    [self layoutIfNeeded];
-}
-
 - (void)changeState {
     [self actionProcessWithSwitchState:_debugSwitch.isOn];
 }
 
 #pragma mark - action 处理
 - (void)actionProcessWithSwitchState:(BOOL)switchState {
-    switch (_index) {
-        case 0://本地沙盒目录
+    switch (self.moduleType) {
+        case kDebug_ModuleType_SystemState://系统状态展示
+            [self systemState_actionWithState:switchState];
+            break;
+            
+        case kDebug_ModuleType_SandBox://本地沙盒目录
             [self sandBox_actionWithState:switchState];
             break;
             
-        case 1://系统状态展示
-            [self systemState_actionWithState:switchState];
+        case kDebug_ModuleType_DataFetch://请求抓包展示
+            [self fetchData_actionWithState:switchState];
             break;
             
         default:
             break;
     }
 }
+- (void)fetchData_actionWithState:(BOOL)state {
+    [[NSUserDefaults standardUserDefaults] setBool:state forKey:kUserDefaults_DataFetchKey_DebugSwitch];
+    //TODO:
+    
+}
 - (void)sandBox_actionWithState:(BOOL)state {
     [[NSUserDefaults standardUserDefaults] setBool:state forKey:kUserDefaults_SandBoxKey_DebugSwitch];
     if (state) {
-        [[SandBox_Debug sharedInstance] showSandBoxListView];
+        [[SandBox_Debug sharedInstance] showSandBoxListViewWithRootViewController:self.rootViewController];
     } else {
         [[SandBox_Debug sharedInstance] removeSandBoxListView];
     }
