@@ -7,6 +7,7 @@
 //
 
 #import "DebugController.h"
+#import "DataFetch_Debug.h"
 #import "SandBox_Debug.h"
 #import "SystemState_Debug.h"
 #import "UIView+Additions.h"
@@ -164,7 +165,11 @@
 }
 - (void)fetchData_actionWithState:(BOOL)state {
     [[NSUserDefaults standardUserDefaults] setBool:state forKey:kUserDefaults_DataFetchKey_DebugSwitch];
-    //TODO:
+    if (state) {
+        [[DataFetch_Debug sharedInstance] showDataFetchView];
+    } else {
+        [[DataFetch_Debug sharedInstance] hideDataFetchView];
+    }
     
 }
 - (void)sandBox_actionWithState:(BOOL)state {
