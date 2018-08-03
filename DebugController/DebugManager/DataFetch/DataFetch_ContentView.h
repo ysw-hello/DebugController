@@ -9,15 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class DataFetch_Model;
-@interface DataFetchCell : UITableViewCell
 
+@interface DataFetchCell : UITableViewCell
 @property (nonatomic, strong) DataFetch_Model *model;
 
-
 @end
-
-
-
 
 
 @interface DataFetch_ContentView : UIView
