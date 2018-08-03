@@ -146,7 +146,7 @@
 }
 - (void)pushDebuger {
     DebugController *debugVC = [DebugController new];
-    debugVC.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate rootViewController];
+    debugVC.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate window].rootViewController;
     [self.navigationController pushViewController:debugVC animated:YES];
 }
 
