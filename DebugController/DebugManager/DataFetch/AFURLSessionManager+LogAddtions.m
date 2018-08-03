@@ -28,7 +28,7 @@
     
     return [self debugLog_dataTaskWithRequest:request uploadProgress:uploadProgressBlock downloadProgress:downloadProgressBlock completionHandler:^(NSURLResponse *response, id  _Nullable responseObject, NSError * _Nullable error) {
         
-        id requestBody = [NSJSONSerialization JSONObjectWithData:request.HTTPBody options:NSJSONReadingMutableContainers error:nil];
+        NSString *requestBody = [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding];
 //        NSLog(@"Succeed:URL:%@,\n param:%@,\n  method:%@,\n response:%@,\n error:%@\n", request.URL, requestBody, request.HTTPMethod, responseObject, error);
         DataFetch_Model *model = [DataFetch_Model new];
         model.method = request.HTTPMethod;
@@ -37,7 +37,9 @@
         model.requestBody = [NSString stringWithFormat:@"%@", requestBody];
         model.responseBody = [NSString stringWithFormat:@"%@", responseObject];
         model.error = error;
-        [[DataFetch_Debug sharedInstance].dataArr insertObject:model atIndex:0];
+        NSMutableArray *arr = [DataFetch_Debug sharedInstance].dataArr;
+        [arr insertObject:model atIndex:0];
+        [DataFetch_Debug sharedInstance].dataArr = arr;
         if ([DataFetch_Debug sharedInstance].dataArr.count > 250) { //最多显示250条请求数据
             [[DataFetch_Debug sharedInstance].dataArr removeLastObject];
         }

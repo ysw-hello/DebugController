@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface DataFetch_Model : NSObject
 @property (nonatomic, strong) NSString *method;
@@ -25,7 +26,7 @@
 
 + (instancetype)sharedInstance;
 
-- (void)showDataFetchView;
+- (void)showDataFetchViewWithRootViewController:(UIViewController *)rootViewController;
 - (void)hideDataFetchView;
 
 @end

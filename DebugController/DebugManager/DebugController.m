@@ -99,6 +99,7 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self customSubviews];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sandBoxListRemoved) name:kNotif_Name_SandBoxListRemoved object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataFetchContentRemoved) name:kNotif_Name_DataFetchContentRemoved object:nil];
     }
     return self;
 }
@@ -125,6 +126,12 @@
 }
 
 #pragma mark - private SEL
+- (void)dataFetchContentRemoved {
+    if ((self.moduleType == kDebug_ModuleType_DataFetch)) {
+        self.debugSwitch.on = NO;
+    }
+}
+
 - (void)sandBoxListRemoved {
     if (self.moduleType == kDebug_ModuleType_SandBox) {
      self.debugSwitch.on = NO;
@@ -166,7 +173,7 @@
 - (void)fetchData_actionWithState:(BOOL)state {
     [[NSUserDefaults standardUserDefaults] setBool:state forKey:kUserDefaults_DataFetchKey_DebugSwitch];
     if (state) {
-        [[DataFetch_Debug sharedInstance] showDataFetchView];
+        [[DataFetch_Debug sharedInstance] showDataFetchViewWithRootViewController:self.rootViewController];
     } else {
         [[DataFetch_Debug sharedInstance] hideDataFetchView];
     }
