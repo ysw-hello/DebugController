@@ -174,6 +174,8 @@
 				E80A59D02111B220007132F3 /* NetWorkingManager.m */,
 				E80A59CD2111B220007132F3 /* UIImage+Compression.h */,
 				E80A59CF2111B220007132F3 /* UIImage+Compression.m */,
+				E80A59D62112ACBA007132F3 /* Aspects_Debug.h */,
+				E80A59D72112ACBA007132F3 /* Aspects_Debug.m */,
 				E8B5BAD5210EC2E8004EE296 /* Main.storyboard */,
 				E8B5BAD8210EC2E8004EE296 /* Assets.xcassets */,
 				E8B5BADA210EC2E8004EE296 /* LaunchScreen.storyboard */,
@@ -241,8 +243,6 @@
 			children = (
 				E8B5BB10210EE847004EE296 /* UIView+Additions.h */,
 				E8B5BB11210EE847004EE296 /* UIView+Additions.m */,
-				E80A59D62112ACBA007132F3 /* Aspects_Debug.h */,
-				E80A59D72112ACBA007132F3 /* Aspects_Debug.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
