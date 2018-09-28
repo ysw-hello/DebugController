@@ -1,10 +1,22 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
-target ‘DebugController’ do
-    pod 'FMDB', '~> 2.7.2'
-    pod 'AFNetworking', '~> 3.2.1'
-    
-    pod 'GCDWebServer’,  '~> 3.0'
-    pod 'GCDWebServer/WebUploader', '~> 3.0'
-    pod 'GCDWebServer/WebDAV', '~> 3.0'
+platform :ios, '8.0'
+
+inhibit_all_warnings!
+
+def production_pods  #发布环境 pods 集
+    pod 'FastDevTools', '~> 0.5.1'
+
 end
+
+def path_pods   #本地调试 pods 集
+    pod 'FastDevTools', :path => '../FastDevTools'
+
+end
+
+target 'DebugController' do
+    use_frameworks!
+    
+    path_pods
+#    production_pods
+end
+

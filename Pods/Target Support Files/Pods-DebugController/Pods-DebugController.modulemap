@@ -1,0 +1,6 @@
+framework module Pods_DebugController {
+  umbrella header "Pods-DebugController-umbrella.h"
+
+  export *
+  module * { export * }
+}
