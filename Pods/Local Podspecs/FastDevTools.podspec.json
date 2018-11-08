@@ -1,6 +1,6 @@
 {
   "name": "FastDevTools",
-  "version": "0.5.1",
+  "version": "0.7.0",
   "summary": "一些帮助快速开发的工具类for iOS",
   "homepage": "https://github.com/ysw-hello/FastDevTools",
   "license": {
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/ysw-hello/FastDevTools.git",
-    "tag": "0.5.1"
+    "tag": "0.7.0"
   },
   "requires_arc": true,
   "subspecs": [

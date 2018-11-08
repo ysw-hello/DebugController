@@ -147,6 +147,13 @@
 - (void)pushDebuger {
     DebugController *debugVC = [DebugController new];
     debugVC.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate window].rootViewController;
+    debugVC.UIDStr = @"123456";
+    __weak typeof(debugVC) debugVC_weak = debugVC;
+    debugVC.hostChangeBlock = ^{
+        //触发输入URL的待输入框的弹窗，获取输入值回调
+        [[[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"触发输入URL的待输入框的弹窗，获取输入值回调" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil] show];
+        debugVC_weak.hostName = @"https://www.baidu.com";
+    };
     [self.navigationController pushViewController:debugVC animated:YES];
 }
 
