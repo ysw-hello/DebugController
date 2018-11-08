@@ -8,6 +8,8 @@
 
 #import "Aspects_Debug.h"
 #import <libkern/OSAtomic.h>
+#import <os/lock.h>
+#import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -110,7 +112,7 @@ static NSString *const AspectsMessagePrefix = @"aspects_";
 ///////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Private Helper
 
-static id aspect_add(id self, SEL selector, AspectOptions options, id block, NSError **error) {
+static id aspect_add(id self, SEL selector, AspectOptions options, id block, NSError * __autoreleasing *error) {
     NSCParameterAssert(self);
     NSCParameterAssert(selector);
     NSCParameterAssert(block);
@@ -131,7 +133,7 @@ static id aspect_add(id self, SEL selector, AspectOptions options, id block, NSE
     return identifier;
 }
 
-static BOOL aspect_remove(AspectIdentifier *aspect, NSError **error) {
+static BOOL aspect_remove(AspectIdentifier *aspect, NSError * __autoreleasing *error) {
     NSCAssert([aspect isKindOfClass:AspectIdentifier.class], @"Must have correct type.");
     
     __block BOOL success = NO;
@@ -155,10 +157,25 @@ static BOOL aspect_remove(AspectIdentifier *aspect, NSError **error) {
 }
 
 static void aspect_performLocked(dispatch_block_t block) {
-    static OSSpinLock aspect_lock = OS_SPINLOCK_INIT;
-    OSSpinLockLock(&aspect_lock);
-    block();
-    OSSpinLockUnlock(&aspect_lock);
+    if([UIDevice currentDevice].systemVersion.floatValue >= 10.0) {
+        //向上兼容iOS 10
+        OS_UNFAIR_LOCK_AVAILABILITY
+        os_unfair_lock_t unfairLock = &(OS_UNFAIR_LOCK_INIT);
+        os_unfair_lock_lock(unfairLock);
+        block();
+        os_unfair_lock_unlock(unfairLock);
+    } else {
+        //      自旋锁OSSpinLock存在优先级反转的bug，采用os_unfair_lock替代
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        static OSSpinLock aspect_lock = OS_SPINLOCK_INIT;
+        OSSpinLockLock(&aspect_lock);
+        block();
+        OSSpinLockUnlock(&aspect_lock);
+#pragma clang diagnostic pop
+
+    }
+
 }
 
 static SEL aspect_aliasForSelector(SEL selector) {
