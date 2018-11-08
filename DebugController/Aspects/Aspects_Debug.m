@@ -173,9 +173,7 @@ static void aspect_performLocked(dispatch_block_t block) {
         block();
         OSSpinLockUnlock(&aspect_lock);
 #pragma clang diagnostic pop
-
     }
-
 }
 
 static SEL aspect_aliasForSelector(SEL selector) {
