@@ -23,6 +23,7 @@
 #import "SystemState_Debug.h"
 #import "SystemState_StatusBar.h"
 #import "SystemState_Types.h"
+#import "DebugAlertView.h"
 #import "UIView+Additions.h"
 #import "Mp3EncodeManager.h"
 #import "Mp3Encoder.hpp"

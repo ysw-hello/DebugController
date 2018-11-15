@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "NetWorkingManager.h"
 #import "UIView+Additions.h"
+#import "DebugAlertView.h"
 
 @interface TestViewController ()
 
@@ -151,13 +152,15 @@
     debugVC.UIDStr = @"123456";
     __weak typeof(debugVC) debugVC_weak = debugVC;
     debugVC.hostChangeBlock = ^{
-        //触发输入URL的待输入框的弹窗，获取输入值回调
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        [[[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"触发输入URL的待输入框的弹窗，获取输入值回调" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil] show];
-#pragma clang diagnostic pop
-
-        debugVC_weak.hostName = @"https://www.baidu.com";
+        [DebugAlertView createAlertWithTitle:@"环境切换" content:@"可以配置也可以手动输入域名" textFieldPlaceorder:@"例如：https://www.zybang.com" hostPrefixBtnStrArr:@[@"test", @"qatest"] hostNameBtnStrArr:@[@".suanshubang.com", @".zybang.com"] bottomBtnStrArr:@[@"取消", @"确定"] bottomBtnTouchedHandler:^(NSInteger index, NSString *inputStr) {
+            if (index == 1) {
+//                [ZYBHideConfigModel sharedInstance].debugAddress = alert.inputString;
+//                [ZYBSocketService changeSocketHost:alert.inputString];
+//                [[ZYBHideConfigModel sharedInstance] save];
+                debugVC_weak.hostName = inputStr;
+                NSLog(@"最终的host为:%@", inputStr);
+            }
+        }];
     };
     [self.navigationController pushViewController:debugVC animated:YES];
 }
