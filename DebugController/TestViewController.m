@@ -152,7 +152,7 @@
     debugVC.UIDStr = @"123456";
     __weak typeof(debugVC) debugVC_weak = debugVC;
     debugVC.hostChangeBlock = ^{
-        [DebugAlertView createAlertWithTitle:@"环境切换" content:@"可以配置也可以手动输入域名" textFieldPlaceorder:@"例如：https://www.zybang.com" hostPrefixBtnStrArr:@[@"test", @"qatest"] hostNameBtnStrArr:@[@".suanshubang.com", @".zybang.com"] bottomBtnStrArr:@[@"取消", @"确定"] bottomBtnTouchedHandler:^(NSInteger index, NSString *inputStr) {
+        [DebugAlertView createAlertWithTitle:@"环境切换" content:@"可以配置也可以手动输入域名" textFieldPlaceorder: @"例如：https://www.zybang.com" hostPrefixBtnStrArr:@[@"test", @"qatest", @"phptest"] hostNameBtnStrArr:@[@".suanshubang.com", @".zybang.com"] bottomBtnStrArr:@[@"取消", @"确定"] bottomBtnTouchedHandler:^(NSInteger index, NSString *inputStr) {
             if (index == 1) {
 //                [ZYBHideConfigModel sharedInstance].debugAddress = alert.inputString;
 //                [ZYBSocketService changeSocketHost:alert.inputString];
