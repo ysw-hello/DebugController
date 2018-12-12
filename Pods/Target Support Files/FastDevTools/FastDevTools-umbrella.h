@@ -44,7 +44,7 @@
 #import "SystemState_Types.h"
 #import "DebugAlertView.h"
 #import "NSString+EncodeFormat.h"
-#import "UIView+Additions.h"
+#import "UIView+Debug_Additions.h"
 #import "Mp3EncodeManager.h"
 #import "Mp3Encoder.hpp"
 #import "lame.h"

@@ -10,7 +10,7 @@
 #import "DebugController.h"
 #import "AppDelegate.h"
 #import "NetWorkingManager.h"
-#import "UIView+Additions.h"
+#import "UIView+Debug_Additions.h"
 #import "DebugAlertView.h"
 
 @interface TestViewController ()
@@ -27,8 +27,6 @@
     [self testRequest_Get];
     [self testRequest_Post];
     [self testDebuger];
-    [self testNetStatus];
-    
 }
 
 - (void)testRequest_Get {
@@ -43,9 +41,7 @@
     [self creatButtonWithFrame:CGRectMake(10, self.view.bounds.size.height - 65, self.view.bounds.size.width - 20, 50) selector:@selector(pushDebuger) title:@"潘多拉魔盒"];
 }
 
-- (void)testNetStatus {
-    [self creatButtonWithFrame:CGRectMake(10, 300, self.view.bounds.size.width - 20, 50) selector:@selector(netStatusCheck) title:@"网络状态监测"];
-}
+
 
 
 - (UIButton *)creatButtonWithFrame:(CGRect)frame selector:(SEL)selector title:(NSString *)title {
@@ -171,8 +167,5 @@
     [self.navigationController pushViewController:debugVC animated:YES];
 }
 
-- (void)netStatusCheck {
-    [self.navigationController pushViewController:[NSClassFromString(@"NetStatusViewController") new] animated:YES];
-}
 
 @end

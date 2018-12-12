@@ -14,23 +14,23 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - FastDevTools (0.7.3):
-    - FastDevTools/AssetsSave (= 0.7.3)
-    - FastDevTools/CustomTextField (= 0.7.3)
-    - FastDevTools/DebugManager (= 0.7.3)
-    - FastDevTools/Mp3Encode (= 0.7.3)
-    - FastDevTools/WaterWave (= 0.7.3)
-  - FastDevTools/AssetsSave (0.7.3)
-  - FastDevTools/CustomTextField (0.7.3)
-  - FastDevTools/DebugManager (0.7.3):
+  - FastDevTools (0.8.0):
+    - FastDevTools/AssetsSave (= 0.8.0)
+    - FastDevTools/CustomTextField (= 0.8.0)
+    - FastDevTools/DebugManager (= 0.8.0)
+    - FastDevTools/Mp3Encode (= 0.8.0)
+    - FastDevTools/WaterWave (= 0.8.0)
+  - FastDevTools/AssetsSave (0.8.0)
+  - FastDevTools/CustomTextField (0.8.0)
+  - FastDevTools/DebugManager (0.8.0):
     - AFNetworking
     - FastDevTools/CustomTextField
     - FMDB
     - GCDWebServer
     - GCDWebServer/WebDAV
     - GCDWebServer/WebUploader
-  - FastDevTools/Mp3Encode (0.7.3)
-  - FastDevTools/WaterWave (0.7.3)
+  - FastDevTools/Mp3Encode (0.8.0)
+  - FastDevTools/WaterWave (0.8.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -41,11 +41,9 @@ PODS:
     - GCDWebServer/Core
   - GCDWebServer/WebUploader (3.4.2):
     - GCDWebServer/Core
-  - LDNetDiagnoService (1.2.0)
 
 DEPENDENCIES:
   - FastDevTools (from `../FastDevTools`)
-  - LDNetDiagnoService (from `https://github.com/Lede-Inc/LDNetDiagnoService_IOS.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -56,21 +54,13 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   FastDevTools:
     :path: "../FastDevTools"
-  LDNetDiagnoService:
-    :git: https://github.com/Lede-Inc/LDNetDiagnoService_IOS.git
-
-CHECKOUT OPTIONS:
-  LDNetDiagnoService:
-    :commit: d24c165dab923e0450ee0232725dca1473c3933d
-    :git: https://github.com/Lede-Inc/LDNetDiagnoService_IOS.git
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  FastDevTools: 098f64d94868533bfe9dfa2f0d8e9810aef1fc8a
+  FastDevTools: 04b4e2f9157127408db9298a6612c64c884eb87d
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GCDWebServer: 8d67ee9f634b4bb91eb4b8aee440318a5fc6debd
-  LDNetDiagnoService: 022fd45896d988748b6ecdfe2da61d677e6c8f11
 
-PODFILE CHECKSUM: c891496dff89236ef6c757f17a282a389859d614
+PODFILE CHECKSUM: 60a4e1d6d92a004c6b3b306416e6a106a514032f
 
 COCOAPODS: 1.5.3
