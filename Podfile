@@ -4,7 +4,7 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 
 def production_pods  #发布环境 pods 集
-    pod 'FastDevTools', '~> 0.8.0'
+    pod 'FastDevTools', '~> 0.8.1'
 
 end
 
