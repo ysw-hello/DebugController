@@ -1,0 +1,6 @@
+framework module LDNetDiagnoService {
+  umbrella header "LDNetDiagnoService-umbrella.h"
+
+  export *
+  module * { export * }
+}

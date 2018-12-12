@@ -27,6 +27,7 @@
     [self testRequest_Get];
     [self testRequest_Post];
     [self testDebuger];
+    [self testNetStatus];
     
 }
 
@@ -39,8 +40,13 @@
 }
 
 - (void)testDebuger {
-    [self creatButtonWithFrame:CGRectMake(10, self.view.bounds.size.height - 65, self.view.bounds.size.width - 20, 50) selector:@selector(pushDebuger) title:@"调试控制器"];
+    [self creatButtonWithFrame:CGRectMake(10, self.view.bounds.size.height - 65, self.view.bounds.size.width - 20, 50) selector:@selector(pushDebuger) title:@"潘多拉魔盒"];
 }
+
+- (void)testNetStatus {
+    [self creatButtonWithFrame:CGRectMake(10, 300, self.view.bounds.size.width - 20, 50) selector:@selector(netStatusCheck) title:@"网络状态监测"];
+}
+
 
 - (UIButton *)creatButtonWithFrame:(CGRect)frame selector:(SEL)selector title:(NSString *)title {
     UIButton *button = [[UIButton alloc] initWithFrame:frame];
@@ -163,6 +169,10 @@
         }];
     };
     [self.navigationController pushViewController:debugVC animated:YES];
+}
+
+- (void)netStatusCheck {
+    [self.navigationController pushViewController:[NSClassFromString(@"NetStatusViewController") new] animated:YES];
 }
 
 @end

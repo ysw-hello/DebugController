@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "RealReachability.h"
+
 
 @interface AppDelegate ()
 
@@ -21,6 +23,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+//    GLobalRealReachability.hostForPing = @"www.zybang.com";
+//    GLobalRealReachability.hostForCheck = @"www.zybang.com";
+    [GLobalRealReachability startNotifier];
+
     
     return YES;
 }
