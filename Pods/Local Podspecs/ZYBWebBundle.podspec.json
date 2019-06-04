@@ -1,0 +1,26 @@
+{
+  "name": "ZYBWebBundle",
+  "version": "0.0.1",
+  "summary": "a web plug-in",
+  "homepage": "http://git.afpai.com/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yanshiwei": "yanshiwei@zuoyebang.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "git@git.afpai.com:native/ZYBWebBundle.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "**/*.{h,m}",
+    "*.{h,m}"
+  ],
+  "libraries": "icucore",
+  "requires_arc": true
+}

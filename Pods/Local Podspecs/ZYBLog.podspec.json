@@ -1,0 +1,48 @@
+{
+  "name": "ZYBLog",
+  "version": "0.0.2",
+  "summary": "A log library for iOS platform.",
+  "description": "A log library for iOS platform.",
+  "homepage": "https://git.afpai.com/native/ZYBLog.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "韩叙东": "hanxudong@zuoyebang.com"
+  },
+  "source": {
+    "git": "git@git.afpai.com:native/ZYBLog.git",
+    "tag": "0.0.2"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "public_header_files": "ZYBLogHeader.h",
+  "source_files": "ZYBLogHeader.h",
+  "requires_arc": true,
+  "dependencies": {
+    "ZYBReachability": [
+
+    ],
+    "BaseLib": [
+
+    ],
+    "ZYBSwizzle": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "NLog",
+      "requires_arc": false,
+      "public_header_files": "NLog/**/*.h",
+      "source_files": "NLog/**/*"
+    },
+    {
+      "name": "ZYBNLog",
+      "public_header_files": "ZYBNLog/**/*.h",
+      "source_files": "ZYBNLog/**/*"
+    }
+  ]
+}

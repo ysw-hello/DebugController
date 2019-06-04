@@ -14,32 +14,34 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - FastDevTools (0.8.0):
-    - FastDevTools/AssetsSave (= 0.8.0)
-    - FastDevTools/CustomTextField (= 0.8.0)
-    - FastDevTools/DebugManager (= 0.8.0)
-    - FastDevTools/Mp3Encode (= 0.8.0)
-    - FastDevTools/WaterWave (= 0.8.0)
-  - FastDevTools/AssetsSave (0.8.0)
-  - FastDevTools/CustomTextField (0.8.0)
-  - FastDevTools/DebugManager (0.8.0):
+  - FastDevTools (0.9.4):
+    - FastDevTools/AssetsSave (= 0.9.4)
+    - FastDevTools/CustomTextField (= 0.9.4)
+    - FastDevTools/DebugManager (= 0.9.4)
+    - FastDevTools/Mp3Encode (= 0.9.4)
+    - FastDevTools/WaterWave (= 0.9.4)
+  - FastDevTools/AssetsSave (0.9.4)
+  - FastDevTools/CustomTextField (0.9.4)
+  - FastDevTools/DebugManager (0.9.4):
     - AFNetworking
     - FastDevTools/CustomTextField
+    - FLEX
     - FMDB
     - GCDWebServer
     - GCDWebServer/WebDAV
     - GCDWebServer/WebUploader
-  - FastDevTools/Mp3Encode (0.8.0)
-  - FastDevTools/WaterWave (0.8.0)
+  - FastDevTools/Mp3Encode (0.9.4)
+  - FastDevTools/WaterWave (0.9.4)
+  - FLEX (3.0.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - GCDWebServer (3.4.2):
-    - GCDWebServer/Core (= 3.4.2)
-  - GCDWebServer/Core (3.4.2)
-  - GCDWebServer/WebDAV (3.4.2):
+  - GCDWebServer (3.5.2):
+    - GCDWebServer/Core (= 3.5.2)
+  - GCDWebServer/Core (3.5.2)
+  - GCDWebServer/WebDAV (3.5.2):
     - GCDWebServer/Core
-  - GCDWebServer/WebUploader (3.4.2):
+  - GCDWebServer/WebUploader (3.5.2):
     - GCDWebServer/Core
 
 DEPENDENCIES:
@@ -48,6 +50,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FLEX
     - FMDB
     - GCDWebServer
 
@@ -57,10 +60,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  FastDevTools: 04b4e2f9157127408db9298a6612c64c884eb87d
+  FastDevTools: a26b3b9d1fb315f4792aa1056f697d37ac465485
+  FLEX: d66c759bce0f6ebbbf472c742380874d846f2883
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  GCDWebServer: 8d67ee9f634b4bb91eb4b8aee440318a5fc6debd
+  GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
 
-PODFILE CHECKSUM: 60a4e1d6d92a004c6b3b306416e6a106a514032f
+PODFILE CHECKSUM: 9169cbd77de89c179d0f381cac6bdff1dc3514d0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

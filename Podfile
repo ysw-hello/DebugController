@@ -1,16 +1,17 @@
 source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '8.0'
 
 inhibit_all_warnings!
 
 def production_pods  #发布环境 pods 集
-    pod 'FastDevTools', '~> 0.8.1'
+    pod 'FastDevTools', '~> 0.9.4'
 
 end
 
 def path_pods   #本地调试 pods 集
     pod 'FastDevTools', :path => '../FastDevTools'
-
+        
 end
 
 target 'DebugController' do
