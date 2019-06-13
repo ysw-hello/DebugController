@@ -150,7 +150,7 @@
 
 - (void)pushDebuger {
     DebugController *debugVC = [DebugController new];
-    debugVC.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate window].rootViewController;
+//    debugVC.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate window].rootViewController;
     debugVC.UIDStr = @"123456";
     __weak typeof(debugVC) debugVC_weak = debugVC;
     debugVC.hostChangeBlock = ^{

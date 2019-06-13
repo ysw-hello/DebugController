@@ -10,7 +10,7 @@ def production_pods  #发布环境 pods 集
 end
 
 def path_pods   #本地调试 pods 集
-    pod 'FastDevTools', :path => '../FastDevTools'
+  pod 'FastDevTools', :subspecs => ['DebugManager', 'DebugFlex'] , :path => '../FastDevTools'
         
 end
 
@@ -20,4 +20,6 @@ target 'DebugController' do
     path_pods
 #    production_pods
 end
+
+
 

@@ -154,14 +154,12 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FastDevTools/FastDevTools.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FastDevTools/FastDevTools.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
