@@ -1,0 +1,839 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C9183AF84234617B921E3BFB03C6001 /* ZYBHybrid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F947F720A6CB7B5204F87B6C2C4B6 /* ZYBHybrid-dummy.m */; };
+		152E9BE4D541033E03041D6AA3883C90 /* ZYBCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F249B44A2F73FE5212B4CE4667C5A4F /* ZYBCookieManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1BADE6A16696DBE9B3AEAFF54A92791B /* ZYBWebViewDelegateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B732F1BF4BC184576624ED6A1018B7C8 /* ZYBWebViewDelegateManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1D1AB8CA5921E83AEA63E6E52D16C2E2 /* ZYBPluginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5481AC1CBC6A2144AE53101016B6114E /* ZYBPluginProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1E9A224617C1319256E2F8584B5DB1D5 /* ZYBHTMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = EDB2AF719F708C03D9334AEC01D388DD /* ZYBHTMLNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		26BDED8EFC519205C28DF801D062EABE /* NSObject+SJObserverHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D4F73E37182A1AE6DE75DF55308735F /* NSObject+SJObserverHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		27223B07AFA4C562DE4A44362067F9D9 /* ZYBBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE93C78D8578F62695B27A8DD763081 /* ZYBBridge.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2AB1D1133B03B1831B389F93436C003A /* ZYBModuleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = C99C5E739B5719D4B8C09D8041256E74 /* ZYBModuleMethod.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2B141ABE17DC411C81CB327B4E72ABC7 /* ZYBPluginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E2DD7AEED2003536EEE0F77AE2E273F2 /* ZYBPluginManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E626788C31E1B0983D6F0CD271C47A3 /* ZYBWebFeatureManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D8E24034634406BD3E1A2CCE008DBB /* ZYBWebFeatureManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		34E46584858D5596319EE5D5869B2616 /* UIView+ZYBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF311B7E8E1234709059C9A00ADE93 /* UIView+ZYBExtensions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3578FF7C3F87777587509B1D635D7090 /* ZYBPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6DF833FC1E0138F7B04357E669D35 /* ZYBPlugin.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		38A107F80147D17A9FE45269D5195496 /* ZYBBaseWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CD355164425C9AAB09C939DCC273F6 /* ZYBBaseWKWebView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		39F90F1879AEA662E76ED3B74149F6A8 /* ZYBHybridParser.h in Headers */ = {isa = PBXBuildFile; fileRef = F62D2CE637F4989103DFBF1A81003819 /* ZYBHybridParser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3AD2728F4E7A2051A6BDCA123F1B82F8 /* ZYBHTMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C0016D7624C2B261351B11AA425538FA /* ZYBHTMLParser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		40F76D8DD707AC464B9AEDC8299F5474 /* ZYBBaseWKWebView+PluginList.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A273A1B6B7A8E712754486F62E50E3 /* ZYBBaseWKWebView+PluginList.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4250746591511701B7BD89AF550C01FD /* ZYBHybridUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1218607E947AB7E41B1B97D4411507 /* ZYBHybridUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		491CC7E74DC3CFE653A38BB152AB3C79 /* ZYBHybridParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D536CAF96D446826FA95B52FAD8696C0 /* ZYBHybridParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4B0D61FC04CA4DF5A5382802C640707F /* ZYBPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2A94E3E659A31FA0430E7AF7CAE6D4 /* ZYBPlugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4EB0A73031AB83C9BE321CAFB34AD395 /* ZYBHTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B0A66C6E5E37C7359EE1D4DC6CC63D /* ZYBHTMLNode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		54542057BDAA8A1C870997481E506E0C /* ZYBBaseWebViewController+LocalFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FA73A42D0B26D8D873DD05322EBC13 /* ZYBBaseWebViewController+LocalFile.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		551C40B5630BE04325142AD154AC3C9D /* HybridBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8919B6B83A5280886AE2D74B321AEF80 /* HybridBaseNavViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5C4E91BECE723E8D43B7BB7430B63A24 /* ZYBMessageHandlerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72052F9E2D89EE7959FEAC1C30035D24 /* ZYBMessageHandlerManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5E7A526ED452F2E722704E6345674E89 /* ZYBHTMLMediate.h in Headers */ = {isa = PBXBuildFile; fileRef = 52094D911D808A0C1595F895C92D0997 /* ZYBHTMLMediate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		623912BB78951D9CC88B44690A4C98C6 /* ZYBMessageHandlerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 284078F0E3E997CDC6620FDE27B61C65 /* ZYBMessageHandlerManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		680CAB23029BCE024DED957810455C3A /* UIView+ZYBExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A6FBF4975F8CDC8A4B75ACFA2AB5F0C /* UIView+ZYBExtensions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E467E082B615EEF104B6034D3F68E1E /* ZYBHTMLMediate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58AFE7FAB23AA8177845746547D960 /* ZYBHTMLMediate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7301214799A712EC6731F82CF1A67444 /* ZYBBaseWKWebView+PluginList.h in Headers */ = {isa = PBXBuildFile; fileRef = B231E17055CA2A580E11D6EC3100DA97 /* ZYBBaseWKWebView+PluginList.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7408BF251060F122FEA0EAB2E2585B8E /* ZYBBaseWebViewController+ProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E776E60445607B57305BDCE69E76A6F9 /* ZYBBaseWebViewController+ProgressBar.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7A5B1CB7B5D63449C9A3882D4949CA9D /* ZYBBaseWebViewController+PositionCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 42B41B23D233FCD5DC6317C3409367AE /* ZYBBaseWebViewController+PositionCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B7C2D5FB3BE3A65D2191EFFB2A0CE4C /* ZYBWebViewDelegateHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3720FB3B82292DA8B62A426EFDF98D00 /* ZYBWebViewDelegateHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		805599D60BEF6FA8FF188D6C2907E420 /* ZYBSchemeTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3795B52FC9AC1EA8225A73C1ED5E647 /* ZYBSchemeTaskManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		889CC15FF217E685AE01CB8C1DCAD846 /* ZYBHybridUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CBA0585B891FA267F0E41B2DF19D0BE /* ZYBHybridUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CEB806CB4854DB0A77C8D41A27F8A30 /* ZYBBridgeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 674C61A094F82898C435D1CAB914850C /* ZYBBridgeUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8D71D6BFE76FC85CC74E54C02F44E106 /* ZYBWebViewScrollPositionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0D39BAC4E37CF2B8E843F7F5DF6CC9 /* ZYBWebViewScrollPositionManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		91A2C592DCFBBFD52425141C4E4F0A47 /* ZYBBaseWebViewController+PositionCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA2DA7F8741A3A77BBFB79CFEEDE6E /* ZYBBaseWebViewController+PositionCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9984FB8D91C28662A39FAD7C28E76223 /* ZYBWebViewDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 206E63D2EEB1E28C3F307627783988BB /* ZYBWebViewDelegateManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9A3C5EDA847CA8CC89E5E4D8FECBC936 /* NSObject+SJObserverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA291266B2D8E97740F97B709622EF13 /* NSObject+SJObserverHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D52FAD819E3109A705555DA9EFB2635 /* ZYBBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C118F6D6FDB0FA5DDC5CEA54C9D2262 /* ZYBBaseWebViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A625BF5DC9A871409F3B87944273BBF3 /* ZYBBaseWebViewController+ProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C938B4A771FCBF19E92A2449F48A8A70 /* ZYBBaseWebViewController+ProgressBar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD3EF0FBE1C32429B1104D37347C1169 /* ZYBBaseWebViewController+LocalFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 4414B54D489ADF5F8572B9AF1344FD41 /* ZYBBaseWebViewController+LocalFile.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF9F3F0A49D98898067441948BEFB154 /* SystemStateManager_WK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8650ACEC519477212469AE9D83E8AD3C /* SystemStateManager_WK.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B14CA5F62AF8DE2493D32756D64ED0DB /* ZYBAuthorizationChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 168655CB5B754CD9161E5412B6BF67EA /* ZYBAuthorizationChecker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B233F1550DD302C15BA731F0DACCF7C2 /* ZYBHybridDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = A9CB21FF8B3ED1C25C1EC12717A225CC /* ZYBHybridDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B62BD4881E8E4DADD9AB488F7D7A47FD /* HybridBaseNavViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 95AD4D929B43AE915A7BA0480BD1FB5C /* HybridBaseNavViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA940B6D2BAEFEF814DCE95E369E1B83 /* ZYBHybrid.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8A3D507BD23F9E37A93D60F0EA0806 /* ZYBHybrid.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C22F8BB8ABCCDBC5F1FFBF30F1AC3B4F /* ZYBCookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D98912F8F7FA70B4B179B1E64E732C /* ZYBCookieManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C4A93EB2F43D51FD3C56DF5ACE1D94FC /* ZYBAuthorizationChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 21975AF3827BC35F97EB17C097D45E7C /* ZYBAuthorizationChecker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C7684E01601C526F1CD5EE030372CA68 /* ZYBBaseWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 60D79CC1D3FB0EC1B19BB6313095EFF2 /* ZYBBaseWebViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CCA3978977297225F143EE3D95FD9338 /* ZYBBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E72A099BA980A0A1E4776993378CEDD /* ZYBBridge.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CEDDE1A2E8D50E8720FACC696869F7B9 /* ZYBPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6310E47998330CF5480F530209D68378 /* ZYBPluginManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E36CBC94A1984B2084E0258118FAE0A5 /* SystemStateManager_WK.h in Headers */ = {isa = PBXBuildFile; fileRef = A0ABE03428E6ECB32C7F78EFBD0A3E5E /* SystemStateManager_WK.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E52D19C2E1BE4D8869E891EFD5303A3B /* ZYBBaseWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 134690E255EE022CF88F9523E5A4136B /* ZYBBaseWKWebView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E58A7783BB4D43A57C6EE6BE032EA57C /* ZYBWebCoreHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AF197B08FF7C26CB1868E83DF076CE60 /* ZYBWebCoreHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E6084D6FD4FD789A01389457A9DFEA53 /* ZYBModuleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 7764A60AE3EF0AD91FFA90EE8C5C78A3 /* ZYBModuleMethod.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EE6F04C81C3DA1654E48730F434687C2 /* ZYBBridgeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8B8D59CD20200B90974FD46F7DDDE8 /* ZYBBridgeUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FA210EA4E2B2FFF6A242DC3FFBC8B2DA /* ZYBHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5798D3D3E2FD8E3653B63524EA7F86 /* ZYBHTMLParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FB5E9130C0F626A3EF6CA44758E92A53 /* ZYBSchemeTaskManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CD94D10E2EBD28B8F95DBF250761743 /* ZYBSchemeTaskManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FD3211F7A386BF609058E73AF7772D68 /* ZYBWebFeatureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B551C478CB218BBD37C09D5FE14DFD64 /* ZYBWebFeatureManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD5769D666A95776A941EDDA261BB1AC /* ZYBWebViewScrollPositionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A544C56C8FA00DEE1EF844BD062E380B /* ZYBWebViewScrollPositionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27D0D716ADF4140C4F6B29841B88E5B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADA37D60D9678ADCE32BFBA689A054B8 /* ZYBLogKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 400887F7233D2F77178F58439368CD05;
+			remoteInfo = ZYBLogKit;
+		};
+		33AA329857424EA98C3745EAD4376784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8B4D4DB929914375BB3DAC532083662 /* YYModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B24F71FDC23D2B2E241DE51DECC7ED5F;
+			remoteInfo = YYModel;
+		};
+		3403B5D1441E1B1980044E661AAA80E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C7935825E7BB6151CEB6D42A5BDCEF /* YYCategories.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 556E319E4AE87D35B60498A2C4C9B053;
+			remoteInfo = YYCategories;
+		};
+		A46F4B357BA1087CC5E9932D3EF3C7AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 991AF9D96176D17ECD9E3E4B156588D4 /* ZYBBaseClass.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B70B33B460E87DD69487EA22DDBA22;
+			remoteInfo = ZYBBaseClass;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00C7935825E7BB6151CEB6D42A5BDCEF /* YYCategories */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYCategories; path = YYCategories.xcodeproj; sourceTree = "<group>"; };
+		03B0A66C6E5E37C7359EE1D4DC6CC63D /* ZYBHTMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBHTMLNode.m; sourceTree = "<group>"; };
+		0C62E8729D8D1738E90595F921AD67F9 /* ZYBHybrid.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZYBHybrid.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		134690E255EE022CF88F9523E5A4136B /* ZYBBaseWKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBBaseWKWebView.m; sourceTree = "<group>"; };
+		168655CB5B754CD9161E5412B6BF67EA /* ZYBAuthorizationChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBAuthorizationChecker.h; sourceTree = "<group>"; };
+		1C118F6D6FDB0FA5DDC5CEA54C9D2262 /* ZYBBaseWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBBaseWebViewController.m; sourceTree = "<group>"; };
+		1E72A099BA980A0A1E4776993378CEDD /* ZYBBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBBridge.h; sourceTree = "<group>"; };
+		206E63D2EEB1E28C3F307627783988BB /* ZYBWebViewDelegateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBWebViewDelegateManager.m; sourceTree = "<group>"; };
+		21975AF3827BC35F97EB17C097D45E7C /* ZYBAuthorizationChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBAuthorizationChecker.m; sourceTree = "<group>"; };
+		284078F0E3E997CDC6620FDE27B61C65 /* ZYBMessageHandlerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBMessageHandlerManager.h; sourceTree = "<group>"; };
+		2ACB6ABA6A573D6B972586BFB3221914 /* libZYBHybrid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libZYBHybrid.a; path = libZYBHybrid.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CBA0585B891FA267F0E41B2DF19D0BE /* ZYBHybridUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBHybridUtil.h; sourceTree = "<group>"; };
+		31D8E24034634406BD3E1A2CCE008DBB /* ZYBWebFeatureManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBWebFeatureManager.h; sourceTree = "<group>"; };
+		3720FB3B82292DA8B62A426EFDF98D00 /* ZYBWebViewDelegateHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBWebViewDelegateHandler.h; sourceTree = "<group>"; };
+		3F2A94E3E659A31FA0430E7AF7CAE6D4 /* ZYBPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBPlugin.h; sourceTree = "<group>"; };
+		42B41B23D233FCD5DC6317C3409367AE /* ZYBBaseWebViewController+PositionCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZYBBaseWebViewController+PositionCache.h"; sourceTree = "<group>"; };
+		4414B54D489ADF5F8572B9AF1344FD41 /* ZYBBaseWebViewController+LocalFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZYBBaseWebViewController+LocalFile.h"; sourceTree = "<group>"; };
+		45FA73A42D0B26D8D873DD05322EBC13 /* ZYBBaseWebViewController+LocalFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZYBBaseWebViewController+LocalFile.m"; sourceTree = "<group>"; };
+		4C8B8D59CD20200B90974FD46F7DDDE8 /* ZYBBridgeUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBBridgeUtils.h; sourceTree = "<group>"; };
+		4F249B44A2F73FE5212B4CE4667C5A4F /* ZYBCookieManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBCookieManager.m; sourceTree = "<group>"; };
+		52094D911D808A0C1595F895C92D0997 /* ZYBHTMLMediate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBHTMLMediate.h; sourceTree = "<group>"; };
+		5481AC1CBC6A2144AE53101016B6114E /* ZYBPluginProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBPluginProtocol.h; sourceTree = "<group>"; };
+		5BFF311B7E8E1234709059C9A00ADE93 /* UIView+ZYBExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZYBExtensions.m"; sourceTree = "<group>"; };
+		60D79CC1D3FB0EC1B19BB6313095EFF2 /* ZYBBaseWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBBaseWebViewController.h; sourceTree = "<group>"; };
+		6310E47998330CF5480F530209D68378 /* ZYBPluginManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBPluginManager.m; sourceTree = "<group>"; };
+		674C61A094F82898C435D1CAB914850C /* ZYBBridgeUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBBridgeUtils.m; sourceTree = "<group>"; };
+		68AE9A3F14676977988651CAFD1B6E22 /* HybridCore.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = HybridCore.bundle; path = ZYBHybrid/Core/Resources/HybridCore.bundle; sourceTree = "<group>"; };
+		6BE6DF833FC1E0138F7B04357E669D35 /* ZYBPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBPlugin.m; sourceTree = "<group>"; };
+		6CD94D10E2EBD28B8F95DBF250761743 /* ZYBSchemeTaskManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBSchemeTaskManager.h; sourceTree = "<group>"; };
+		6D4F73E37182A1AE6DE75DF55308735F /* NSObject+SJObserverHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+SJObserverHelper.h"; sourceTree = "<group>"; };
+		6E6E435724D40327B5502851FE19497D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		72052F9E2D89EE7959FEAC1C30035D24 /* ZYBMessageHandlerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBMessageHandlerManager.m; sourceTree = "<group>"; };
+		7764A60AE3EF0AD91FFA90EE8C5C78A3 /* ZYBModuleMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBModuleMethod.h; sourceTree = "<group>"; };
+		7A1218607E947AB7E41B1B97D4411507 /* ZYBHybridUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBHybridUtil.m; sourceTree = "<group>"; };
+		8650ACEC519477212469AE9D83E8AD3C /* SystemStateManager_WK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SystemStateManager_WK.m; sourceTree = "<group>"; };
+		8919B6B83A5280886AE2D74B321AEF80 /* HybridBaseNavViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HybridBaseNavViewController.m; sourceTree = "<group>"; };
+		89D98912F8F7FA70B4B179B1E64E732C /* ZYBCookieManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBCookieManager.h; sourceTree = "<group>"; };
+		8D6F947F720A6CB7B5204F87B6C2C4B6 /* ZYBHybrid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZYBHybrid-dummy.m"; sourceTree = "<group>"; };
+		8DEA2DA7F8741A3A77BBFB79CFEEDE6E /* ZYBBaseWebViewController+PositionCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZYBBaseWebViewController+PositionCache.m"; sourceTree = "<group>"; };
+		94A273A1B6B7A8E712754486F62E50E3 /* ZYBBaseWKWebView+PluginList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZYBBaseWKWebView+PluginList.m"; sourceTree = "<group>"; };
+		95AD4D929B43AE915A7BA0480BD1FB5C /* HybridBaseNavViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HybridBaseNavViewController.h; sourceTree = "<group>"; };
+		991AF9D96176D17ECD9E3E4B156588D4 /* ZYBBaseClass */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZYBBaseClass; path = ZYBBaseClass.xcodeproj; sourceTree = "<group>"; };
+		9A6FBF4975F8CDC8A4B75ACFA2AB5F0C /* UIView+ZYBExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+ZYBExtensions.h"; sourceTree = "<group>"; };
+		A0ABE03428E6ECB32C7F78EFBD0A3E5E /* SystemStateManager_WK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SystemStateManager_WK.h; sourceTree = "<group>"; };
+		A544C56C8FA00DEE1EF844BD062E380B /* ZYBWebViewScrollPositionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBWebViewScrollPositionManager.h; sourceTree = "<group>"; };
+		A9CB21FF8B3ED1C25C1EC12717A225CC /* ZYBHybridDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBHybridDefine.h; sourceTree = "<group>"; };
+		AA291266B2D8E97740F97B709622EF13 /* NSObject+SJObserverHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SJObserverHelper.m"; sourceTree = "<group>"; };
+		ADA37D60D9678ADCE32BFBA689A054B8 /* ZYBLogKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZYBLogKit; path = ZYBLogKit.xcodeproj; sourceTree = "<group>"; };
+		AF197B08FF7C26CB1868E83DF076CE60 /* ZYBWebCoreHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZYBWebCoreHeader.h; path = ZYBHybrid/Core/Classes/ZYBWebCoreHeader.h; sourceTree = "<group>"; };
+		AF8A3D507BD23F9E37A93D60F0EA0806 /* ZYBHybrid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZYBHybrid.h; path = ZYBHybrid/ZYBHybrid.h; sourceTree = "<group>"; };
+		B231E17055CA2A580E11D6EC3100DA97 /* ZYBBaseWKWebView+PluginList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZYBBaseWKWebView+PluginList.h"; sourceTree = "<group>"; };
+		B551C478CB218BBD37C09D5FE14DFD64 /* ZYBWebFeatureManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBWebFeatureManager.m; sourceTree = "<group>"; };
+		B5CD355164425C9AAB09C939DCC273F6 /* ZYBBaseWKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBBaseWKWebView.h; sourceTree = "<group>"; };
+		B732F1BF4BC184576624ED6A1018B7C8 /* ZYBWebViewDelegateManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBWebViewDelegateManager.h; sourceTree = "<group>"; };
+		BC0D39BAC4E37CF2B8E843F7F5DF6CC9 /* ZYBWebViewScrollPositionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBWebViewScrollPositionManager.m; sourceTree = "<group>"; };
+		C0016D7624C2B261351B11AA425538FA /* ZYBHTMLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBHTMLParser.h; sourceTree = "<group>"; };
+		C3795B52FC9AC1EA8225A73C1ED5E647 /* ZYBSchemeTaskManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBSchemeTaskManager.m; sourceTree = "<group>"; };
+		C8B4D4DB929914375BB3DAC532083662 /* YYModel */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYModel; path = YYModel.xcodeproj; sourceTree = "<group>"; };
+		C938B4A771FCBF19E92A2449F48A8A70 /* ZYBBaseWebViewController+ProgressBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZYBBaseWebViewController+ProgressBar.h"; sourceTree = "<group>"; };
+		C99C5E739B5719D4B8C09D8041256E74 /* ZYBModuleMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBModuleMethod.m; sourceTree = "<group>"; };
+		D21BD59EE1432CDCECFE52CD2C531CE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D536CAF96D446826FA95B52FAD8696C0 /* ZYBHybridParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBHybridParser.m; sourceTree = "<group>"; };
+		D8FFD18ED9C706075AF237A792F7E500 /* ZYBHybrid-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZYBHybrid-prefix.pch"; sourceTree = "<group>"; };
+		DA5798D3D3E2FD8E3653B63524EA7F86 /* ZYBHTMLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBHTMLParser.m; sourceTree = "<group>"; };
+		DDE93C78D8578F62695B27A8DD763081 /* ZYBBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBBridge.m; sourceTree = "<group>"; };
+		E2DD7AEED2003536EEE0F77AE2E273F2 /* ZYBPluginManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBPluginManager.h; sourceTree = "<group>"; };
+		E776E60445607B57305BDCE69E76A6F9 /* ZYBBaseWebViewController+ProgressBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZYBBaseWebViewController+ProgressBar.m"; sourceTree = "<group>"; };
+		EDB2AF719F708C03D9334AEC01D388DD /* ZYBHTMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBHTMLNode.h; sourceTree = "<group>"; };
+		F62D2CE637F4989103DFBF1A81003819 /* ZYBHybridParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZYBHybridParser.h; sourceTree = "<group>"; };
+		FC58AFE7FAB23AA8177845746547D960 /* ZYBHTMLMediate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZYBHTMLMediate.m; sourceTree = "<group>"; };
+		FD9070938C22D1F3384DD3AFC7BECB78 /* ZYBHybrid.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZYBHybrid.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E06593BADF429FDF347021F2F6C7262A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		067403742000A0AAC4CF8203D9FA5270 /* LocalFile */ = {
+			isa = PBXGroup;
+			children = (
+				4414B54D489ADF5F8572B9AF1344FD41 /* ZYBBaseWebViewController+LocalFile.h */,
+				45FA73A42D0B26D8D873DD05322EBC13 /* ZYBBaseWebViewController+LocalFile.m */,
+			);
+			name = LocalFile;
+			path = LocalFile;
+			sourceTree = "<group>";
+		};
+		074D845AD0757868D8130FC9F152F572 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C8C244B6782699DCAE57153E03EAABE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D21BD59EE1432CDCECFE52CD2C531CE5 /* LICENSE */,
+				6E6E435724D40327B5502851FE19497D /* README.md */,
+				0C62E8729D8D1738E90595F921AD67F9 /* ZYBHybrid.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		0C94BE4EA6DEB8ADC5880AC253F44281 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ACB6ABA6A573D6B972586BFB3221914 /* libZYBHybrid.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11F85DF4B14F2E490B1F914B23C1FE14 /* SchemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				6CD94D10E2EBD28B8F95DBF250761743 /* ZYBSchemeTaskManager.h */,
+				C3795B52FC9AC1EA8225A73C1ED5E647 /* ZYBSchemeTaskManager.m */,
+			);
+			name = SchemeManager;
+			path = SchemeManager;
+			sourceTree = "<group>";
+		};
+		143D13EA7FE983AEB3E63F5B375DB437 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				00C7935825E7BB6151CEB6D42A5BDCEF /* YYCategories */,
+				C8B4D4DB929914375BB3DAC532083662 /* YYModel */,
+				991AF9D96176D17ECD9E3E4B156588D4 /* ZYBBaseClass */,
+				ADA37D60D9678ADCE32BFBA689A054B8 /* ZYBLogKit */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		19DCA962ACAB40D287A286841F7C468D /* DelegateLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3720FB3B82292DA8B62A426EFDF98D00 /* ZYBWebViewDelegateHandler.h */,
+				B732F1BF4BC184576624ED6A1018B7C8 /* ZYBWebViewDelegateManager.h */,
+				206E63D2EEB1E28C3F307627783988BB /* ZYBWebViewDelegateManager.m */,
+			);
+			name = DelegateLayer;
+			path = DelegateLayer;
+			sourceTree = "<group>";
+		};
+		235F35C31EAD5E0F8D23CD66571E85CE /* ZYBHybrid */ = {
+			isa = PBXGroup;
+			children = (
+				AF8A3D507BD23F9E37A93D60F0EA0806 /* ZYBHybrid.h */,
+				EB76F37BBE4C0B2203218675D28D06EE /* Core */,
+				0C8C244B6782699DCAE57153E03EAABE /* Pod */,
+				FB77615F46F71C0D2CA41263F32926FA /* Support Files */,
+			);
+			name = ZYBHybrid;
+			path = ../../../zybhybrid;
+			sourceTree = "<group>";
+		};
+		31221E922EDCC5BAA994708CA0B6D6BF /* HTMLMediate */ = {
+			isa = PBXGroup;
+			children = (
+				52094D911D808A0C1595F895C92D0997 /* ZYBHTMLMediate.h */,
+				FC58AFE7FAB23AA8177845746547D960 /* ZYBHTMLMediate.m */,
+				EDB2AF719F708C03D9334AEC01D388DD /* ZYBHTMLNode.h */,
+				03B0A66C6E5E37C7359EE1D4DC6CC63D /* ZYBHTMLNode.m */,
+				C0016D7624C2B261351B11AA425538FA /* ZYBHTMLParser.h */,
+				DA5798D3D3E2FD8E3653B63524EA7F86 /* ZYBHTMLParser.m */,
+			);
+			name = HTMLMediate;
+			path = HTMLMediate;
+			sourceTree = "<group>";
+		};
+		39B7E340ECAF54CE973C37954249BD5E /* ZYBPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				7764A60AE3EF0AD91FFA90EE8C5C78A3 /* ZYBModuleMethod.h */,
+				C99C5E739B5719D4B8C09D8041256E74 /* ZYBModuleMethod.m */,
+				3F2A94E3E659A31FA0430E7AF7CAE6D4 /* ZYBPlugin.h */,
+				6BE6DF833FC1E0138F7B04357E669D35 /* ZYBPlugin.m */,
+				E2DD7AEED2003536EEE0F77AE2E273F2 /* ZYBPluginManager.h */,
+				6310E47998330CF5480F530209D68378 /* ZYBPluginManager.m */,
+				5481AC1CBC6A2144AE53101016B6114E /* ZYBPluginProtocol.h */,
+			);
+			name = ZYBPlugin;
+			path = ZYBPlugin;
+			sourceTree = "<group>";
+		};
+		4497E3088C23857AF1B99BE8CB089C7A /* PositionCache */ = {
+			isa = PBXGroup;
+			children = (
+				42B41B23D233FCD5DC6317C3409367AE /* ZYBBaseWebViewController+PositionCache.h */,
+				8DEA2DA7F8741A3A77BBFB79CFEEDE6E /* ZYBBaseWebViewController+PositionCache.m */,
+				A544C56C8FA00DEE1EF844BD062E380B /* ZYBWebViewScrollPositionManager.h */,
+				BC0D39BAC4E37CF2B8E843F7F5DF6CC9 /* ZYBWebViewScrollPositionManager.m */,
+			);
+			name = PositionCache;
+			path = PositionCache;
+			sourceTree = "<group>";
+		};
+		6204303576D87C48C0B9A30640A3693F /* Cookie */ = {
+			isa = PBXGroup;
+			children = (
+				89D98912F8F7FA70B4B179B1E64E732C /* ZYBCookieManager.h */,
+				4F249B44A2F73FE5212B4CE4667C5A4F /* ZYBCookieManager.m */,
+			);
+			name = Cookie;
+			path = Cookie;
+			sourceTree = "<group>";
+		};
+		629F205A3242E99208A37188279C2D02 = {
+			isa = PBXGroup;
+			children = (
+				143D13EA7FE983AEB3E63F5B375DB437 /* Dependencies */,
+				074D845AD0757868D8130FC9F152F572 /* Frameworks */,
+				0C94BE4EA6DEB8ADC5880AC253F44281 /* Products */,
+				235F35C31EAD5E0F8D23CD66571E85CE /* ZYBHybrid */,
+			);
+			sourceTree = "<group>";
+		};
+		6A7562386DDC2E7D622C95BBFE5F1B84 /* FeaturePool */ = {
+			isa = PBXGroup;
+			children = (
+				A7495314AB9C9233A5D444FACAED6B81 /* AuthorizationChecker */,
+				6204303576D87C48C0B9A30640A3693F /* Cookie */,
+				19DCA962ACAB40D287A286841F7C468D /* DelegateLayer */,
+				31221E922EDCC5BAA994708CA0B6D6BF /* HTMLMediate */,
+				067403742000A0AAC4CF8203D9FA5270 /* LocalFile */,
+				92B90A39AA9CCA78661323BC4C1EB28C /* MessageHandler */,
+				790A2B1F58682C63082214BBEACA683E /* PerformanceMonitor */,
+				4497E3088C23857AF1B99BE8CB089C7A /* PositionCache */,
+				ACC0CA2D707049CDB2B9051E235A2DA8 /* ProgressBar */,
+				11F85DF4B14F2E490B1F914B23C1FE14 /* SchemeManager */,
+			);
+			name = FeaturePool;
+			path = ZYBHybrid/Core/Classes/FeaturePool;
+			sourceTree = "<group>";
+		};
+		790A2B1F58682C63082214BBEACA683E /* PerformanceMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A0ABE03428E6ECB32C7F78EFBD0A3E5E /* SystemStateManager_WK.h */,
+				8650ACEC519477212469AE9D83E8AD3C /* SystemStateManager_WK.m */,
+			);
+			name = PerformanceMonitor;
+			path = PerformanceMonitor;
+			sourceTree = "<group>";
+		};
+		7B527D669310E7BED8B671EE1C81A206 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				95AD4D929B43AE915A7BA0480BD1FB5C /* HybridBaseNavViewController.h */,
+				8919B6B83A5280886AE2D74B321AEF80 /* HybridBaseNavViewController.m */,
+				60D79CC1D3FB0EC1B19BB6313095EFF2 /* ZYBBaseWebViewController.h */,
+				1C118F6D6FDB0FA5DDC5CEA54C9D2262 /* ZYBBaseWebViewController.m */,
+				B5CD355164425C9AAB09C939DCC273F6 /* ZYBBaseWKWebView.h */,
+				134690E255EE022CF88F9523E5A4136B /* ZYBBaseWKWebView.m */,
+				31D8E24034634406BD3E1A2CCE008DBB /* ZYBWebFeatureManager.h */,
+				B551C478CB218BBD37C09D5FE14DFD64 /* ZYBWebFeatureManager.m */,
+			);
+			name = Base;
+			path = ZYBHybrid/Core/Classes/Base;
+			sourceTree = "<group>";
+		};
+		92B90A39AA9CCA78661323BC4C1EB28C /* MessageHandler */ = {
+			isa = PBXGroup;
+			children = (
+				284078F0E3E997CDC6620FDE27B61C65 /* ZYBMessageHandlerManager.h */,
+				72052F9E2D89EE7959FEAC1C30035D24 /* ZYBMessageHandlerManager.m */,
+			);
+			name = MessageHandler;
+			path = MessageHandler;
+			sourceTree = "<group>";
+		};
+		99574572648EF8043D933F6C8D49E04F /* MessageDispatch */ = {
+			isa = PBXGroup;
+			children = (
+				BA4A0C9983D8006660B488FFCD3B82A8 /* Bridge */,
+				39B7E340ECAF54CE973C37954249BD5E /* ZYBPlugin */,
+			);
+			name = MessageDispatch;
+			path = ZYBHybrid/Core/Classes/MessageDispatch;
+			sourceTree = "<group>";
+		};
+		A7495314AB9C9233A5D444FACAED6B81 /* AuthorizationChecker */ = {
+			isa = PBXGroup;
+			children = (
+				168655CB5B754CD9161E5412B6BF67EA /* ZYBAuthorizationChecker.h */,
+				21975AF3827BC35F97EB17C097D45E7C /* ZYBAuthorizationChecker.m */,
+				F62D2CE637F4989103DFBF1A81003819 /* ZYBHybridParser.h */,
+				D536CAF96D446826FA95B52FAD8696C0 /* ZYBHybridParser.m */,
+			);
+			name = AuthorizationChecker;
+			path = AuthorizationChecker;
+			sourceTree = "<group>";
+		};
+		ACC0CA2D707049CDB2B9051E235A2DA8 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				C938B4A771FCBF19E92A2449F48A8A70 /* ZYBBaseWebViewController+ProgressBar.h */,
+				E776E60445607B57305BDCE69E76A6F9 /* ZYBBaseWebViewController+ProgressBar.m */,
+			);
+			name = ProgressBar;
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		BA4A0C9983D8006660B488FFCD3B82A8 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				1E72A099BA980A0A1E4776993378CEDD /* ZYBBridge.h */,
+				DDE93C78D8578F62695B27A8DD763081 /* ZYBBridge.m */,
+				4C8B8D59CD20200B90974FD46F7DDDE8 /* ZYBBridgeUtils.h */,
+				674C61A094F82898C435D1CAB914850C /* ZYBBridgeUtils.m */,
+			);
+			name = Bridge;
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		DA54ED8627C8389D4BB30E4FCD8538B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6D4F73E37182A1AE6DE75DF55308735F /* NSObject+SJObserverHelper.h */,
+				AA291266B2D8E97740F97B709622EF13 /* NSObject+SJObserverHelper.m */,
+				9A6FBF4975F8CDC8A4B75ACFA2AB5F0C /* UIView+ZYBExtensions.h */,
+				5BFF311B7E8E1234709059C9A00ADE93 /* UIView+ZYBExtensions.m */,
+				B231E17055CA2A580E11D6EC3100DA97 /* ZYBBaseWKWebView+PluginList.h */,
+				94A273A1B6B7A8E712754486F62E50E3 /* ZYBBaseWKWebView+PluginList.m */,
+				A9CB21FF8B3ED1C25C1EC12717A225CC /* ZYBHybridDefine.h */,
+				2CBA0585B891FA267F0E41B2DF19D0BE /* ZYBHybridUtil.h */,
+				7A1218607E947AB7E41B1B97D4411507 /* ZYBHybridUtil.m */,
+			);
+			name = Utils;
+			path = ZYBHybrid/Core/Classes/Utils;
+			sourceTree = "<group>";
+		};
+		EB76F37BBE4C0B2203218675D28D06EE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AF197B08FF7C26CB1868E83DF076CE60 /* ZYBWebCoreHeader.h */,
+				7B527D669310E7BED8B671EE1C81A206 /* Base */,
+				6A7562386DDC2E7D622C95BBFE5F1B84 /* FeaturePool */,
+				99574572648EF8043D933F6C8D49E04F /* MessageDispatch */,
+				FCF4192FAC6ED63B178BDD815370A891 /* Resources */,
+				DA54ED8627C8389D4BB30E4FCD8538B3 /* Utils */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		FB77615F46F71C0D2CA41263F32926FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD9070938C22D1F3384DD3AFC7BECB78 /* ZYBHybrid.xcconfig */,
+				8D6F947F720A6CB7B5204F87B6C2C4B6 /* ZYBHybrid-dummy.m */,
+				D8FFD18ED9C706075AF237A792F7E500 /* ZYBHybrid-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../GitHub/DebugController/Pods/Target Support Files/ZYBHybrid";
+			sourceTree = "<group>";
+		};
+		FCF4192FAC6ED63B178BDD815370A891 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68AE9A3F14676977988651CAFD1B6E22 /* HybridCore.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A9625F22330A04D32EC0ABC03242057E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B62BD4881E8E4DADD9AB488F7D7A47FD /* HybridBaseNavViewController.h in Headers */,
+				26BDED8EFC519205C28DF801D062EABE /* NSObject+SJObserverHelper.h in Headers */,
+				E36CBC94A1984B2084E0258118FAE0A5 /* SystemStateManager_WK.h in Headers */,
+				680CAB23029BCE024DED957810455C3A /* UIView+ZYBExtensions.h in Headers */,
+				B14CA5F62AF8DE2493D32756D64ED0DB /* ZYBAuthorizationChecker.h in Headers */,
+				AD3EF0FBE1C32429B1104D37347C1169 /* ZYBBaseWebViewController+LocalFile.h in Headers */,
+				7A5B1CB7B5D63449C9A3882D4949CA9D /* ZYBBaseWebViewController+PositionCache.h in Headers */,
+				A625BF5DC9A871409F3B87944273BBF3 /* ZYBBaseWebViewController+ProgressBar.h in Headers */,
+				C7684E01601C526F1CD5EE030372CA68 /* ZYBBaseWebViewController.h in Headers */,
+				7301214799A712EC6731F82CF1A67444 /* ZYBBaseWKWebView+PluginList.h in Headers */,
+				38A107F80147D17A9FE45269D5195496 /* ZYBBaseWKWebView.h in Headers */,
+				CCA3978977297225F143EE3D95FD9338 /* ZYBBridge.h in Headers */,
+				EE6F04C81C3DA1654E48730F434687C2 /* ZYBBridgeUtils.h in Headers */,
+				C22F8BB8ABCCDBC5F1FFBF30F1AC3B4F /* ZYBCookieManager.h in Headers */,
+				5E7A526ED452F2E722704E6345674E89 /* ZYBHTMLMediate.h in Headers */,
+				1E9A224617C1319256E2F8584B5DB1D5 /* ZYBHTMLNode.h in Headers */,
+				3AD2728F4E7A2051A6BDCA123F1B82F8 /* ZYBHTMLParser.h in Headers */,
+				BA940B6D2BAEFEF814DCE95E369E1B83 /* ZYBHybrid.h in Headers */,
+				B233F1550DD302C15BA731F0DACCF7C2 /* ZYBHybridDefine.h in Headers */,
+				39F90F1879AEA662E76ED3B74149F6A8 /* ZYBHybridParser.h in Headers */,
+				889CC15FF217E685AE01CB8C1DCAD846 /* ZYBHybridUtil.h in Headers */,
+				623912BB78951D9CC88B44690A4C98C6 /* ZYBMessageHandlerManager.h in Headers */,
+				E6084D6FD4FD789A01389457A9DFEA53 /* ZYBModuleMethod.h in Headers */,
+				4B0D61FC04CA4DF5A5382802C640707F /* ZYBPlugin.h in Headers */,
+				2B141ABE17DC411C81CB327B4E72ABC7 /* ZYBPluginManager.h in Headers */,
+				1D1AB8CA5921E83AEA63E6E52D16C2E2 /* ZYBPluginProtocol.h in Headers */,
+				FB5E9130C0F626A3EF6CA44758E92A53 /* ZYBSchemeTaskManager.h in Headers */,
+				E58A7783BB4D43A57C6EE6BE032EA57C /* ZYBWebCoreHeader.h in Headers */,
+				2E626788C31E1B0983D6F0CD271C47A3 /* ZYBWebFeatureManager.h in Headers */,
+				7B7C2D5FB3BE3A65D2191EFFB2A0CE4C /* ZYBWebViewDelegateHandler.h in Headers */,
+				1BADE6A16696DBE9B3AEAFF54A92791B /* ZYBWebViewDelegateManager.h in Headers */,
+				FD5769D666A95776A941EDDA261BB1AC /* ZYBWebViewScrollPositionManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EB7AFE7949C120CDD4E4F8F8D3701D3 /* ZYBHybrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3152762C43CECB083E9CDB66FA6832AE /* Build configuration list for PBXNativeTarget "ZYBHybrid" */;
+			buildPhases = (
+				A9625F22330A04D32EC0ABC03242057E /* Headers */,
+				C253896B78A88C69E10E5BD33F4C5584 /* Sources */,
+				E06593BADF429FDF347021F2F6C7262A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA85A987EC2E7C3B0E85C15E26D96453 /* PBXTargetDependency */,
+				90F501C82B7A3C53E04DEB7CB1CCB597 /* PBXTargetDependency */,
+				C4DBF6B78B054CC0AF55067CE4E1D624 /* PBXTargetDependency */,
+				3BB9C498BE5BD933A22748B791ED836C /* PBXTargetDependency */,
+			);
+			name = ZYBHybrid;
+			productName = ZYBHybrid;
+			productReference = 2ACB6ABA6A573D6B972586BFB3221914 /* libZYBHybrid.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7327626ED61C9917B96BDF50AEB61C54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 50683EB7C2BB54195EF6D126B93F510E /* Build configuration list for PBXProject "ZYBHybrid" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 629F205A3242E99208A37188279C2D02;
+			productRefGroup = 0C94BE4EA6DEB8ADC5880AC253F44281 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProjectRef = ADA37D60D9678ADCE32BFBA689A054B8 /* ZYBLogKit */;
+				},
+				{
+					ProjectRef = 991AF9D96176D17ECD9E3E4B156588D4 /* ZYBBaseClass */;
+				},
+				{
+					ProjectRef = 00C7935825E7BB6151CEB6D42A5BDCEF /* YYCategories */;
+				},
+				{
+					ProjectRef = C8B4D4DB929914375BB3DAC532083662 /* YYModel */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3EB7AFE7949C120CDD4E4F8F8D3701D3 /* ZYBHybrid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C253896B78A88C69E10E5BD33F4C5584 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551C40B5630BE04325142AD154AC3C9D /* HybridBaseNavViewController.m in Sources */,
+				9A3C5EDA847CA8CC89E5E4D8FECBC936 /* NSObject+SJObserverHelper.m in Sources */,
+				AF9F3F0A49D98898067441948BEFB154 /* SystemStateManager_WK.m in Sources */,
+				34E46584858D5596319EE5D5869B2616 /* UIView+ZYBExtensions.m in Sources */,
+				C4A93EB2F43D51FD3C56DF5ACE1D94FC /* ZYBAuthorizationChecker.m in Sources */,
+				54542057BDAA8A1C870997481E506E0C /* ZYBBaseWebViewController+LocalFile.m in Sources */,
+				91A2C592DCFBBFD52425141C4E4F0A47 /* ZYBBaseWebViewController+PositionCache.m in Sources */,
+				7408BF251060F122FEA0EAB2E2585B8E /* ZYBBaseWebViewController+ProgressBar.m in Sources */,
+				9D52FAD819E3109A705555DA9EFB2635 /* ZYBBaseWebViewController.m in Sources */,
+				40F76D8DD707AC464B9AEDC8299F5474 /* ZYBBaseWKWebView+PluginList.m in Sources */,
+				E52D19C2E1BE4D8869E891EFD5303A3B /* ZYBBaseWKWebView.m in Sources */,
+				27223B07AFA4C562DE4A44362067F9D9 /* ZYBBridge.m in Sources */,
+				8CEB806CB4854DB0A77C8D41A27F8A30 /* ZYBBridgeUtils.m in Sources */,
+				152E9BE4D541033E03041D6AA3883C90 /* ZYBCookieManager.m in Sources */,
+				6E467E082B615EEF104B6034D3F68E1E /* ZYBHTMLMediate.m in Sources */,
+				4EB0A73031AB83C9BE321CAFB34AD395 /* ZYBHTMLNode.m in Sources */,
+				FA210EA4E2B2FFF6A242DC3FFBC8B2DA /* ZYBHTMLParser.m in Sources */,
+				0C9183AF84234617B921E3BFB03C6001 /* ZYBHybrid-dummy.m in Sources */,
+				491CC7E74DC3CFE653A38BB152AB3C79 /* ZYBHybridParser.m in Sources */,
+				4250746591511701B7BD89AF550C01FD /* ZYBHybridUtil.m in Sources */,
+				5C4E91BECE723E8D43B7BB7430B63A24 /* ZYBMessageHandlerManager.m in Sources */,
+				2AB1D1133B03B1831B389F93436C003A /* ZYBModuleMethod.m in Sources */,
+				3578FF7C3F87777587509B1D635D7090 /* ZYBPlugin.m in Sources */,
+				CEDDE1A2E8D50E8720FACC696869F7B9 /* ZYBPluginManager.m in Sources */,
+				805599D60BEF6FA8FF188D6C2907E420 /* ZYBSchemeTaskManager.m in Sources */,
+				FD3211F7A386BF609058E73AF7772D68 /* ZYBWebFeatureManager.m in Sources */,
+				9984FB8D91C28662A39FAD7C28E76223 /* ZYBWebViewDelegateManager.m in Sources */,
+				8D71D6BFE76FC85CC74E54C02F44E106 /* ZYBWebViewScrollPositionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BB9C498BE5BD933A22748B791ED836C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZYBLogKit;
+			targetProxy = 27D0D716ADF4140C4F6B29841B88E5B5 /* PBXContainerItemProxy */;
+		};
+		90F501C82B7A3C53E04DEB7CB1CCB597 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYModel;
+			targetProxy = 33AA329857424EA98C3745EAD4376784 /* PBXContainerItemProxy */;
+		};
+		C4DBF6B78B054CC0AF55067CE4E1D624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZYBBaseClass;
+			targetProxy = A46F4B357BA1087CC5E9932D3EF3C7AD /* PBXContainerItemProxy */;
+		};
+		FA85A987EC2E7C3B0E85C15E26D96453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYCategories;
+			targetProxy = 3403B5D1441E1B1980044E661AAA80E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4A84143064684F90305635A4226781D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9070938C22D1F3384DD3AFC7BECB78 /* ZYBHybrid.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZYBHybrid/ZYBHybrid-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ZYBHybrid;
+				PRODUCT_NAME = ZYBHybrid;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A525FA482C654F311E87208286E3CF81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9070938C22D1F3384DD3AFC7BECB78 /* ZYBHybrid.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZYBHybrid/ZYBHybrid-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ZYBHybrid;
+				PRODUCT_NAME = ZYBHybrid;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B53244A7563772F255B22800786CAE90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E1F10629F51E15B3913B23857BB76C93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3152762C43CECB083E9CDB66FA6832AE /* Build configuration list for PBXNativeTarget "ZYBHybrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A525FA482C654F311E87208286E3CF81 /* Debug */,
+				4A84143064684F90305635A4226781D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50683EB7C2BB54195EF6D126B93F510E /* Build configuration list for PBXProject "ZYBHybrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F10629F51E15B3913B23857BB76C93 /* Debug */,
+				B53244A7563772F255B22800786CAE90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7327626ED61C9917B96BDF50AEB61C54 /* Project object */;
+}

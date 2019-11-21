@@ -1,0 +1,60 @@
+{
+  "name": "ZYBHybrid",
+  "version": "0.3.3",
+  "summary": "This is a short description of ZYBHybrid.",
+  "description": "针对WKWebview及UIWebView的平台化工具集，Hybrid调用流程规范话处理，调试工具，APM监控，功能组件集成等。",
+  "homepage": "https://git.afpai.com/native/zybhybrid.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yanshiwei": "yanshiwei@zuoyebang.com",
+    "yanglichuan": "yanglichuan@zuoyebang.com"
+  },
+  "source": {
+    "git": "git@git.afpai.com:native/zybhybrid.git",
+    "tag": "0.3.3"
+  },
+  "resources": "ZYBHybrid/Resources/**/*.bundle",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "frameworks": [
+    "UIKit",
+    "WebKit",
+    "CoreTelephony"
+  ],
+  "source_files": "ZYBHybrid/ZYBHybrid.h",
+  "public_header_files": "ZYBHybrid/ZYBHybrid.h",
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": [
+        "ZYBHybrid/Core/Classes/ZYBWebCoreHeader.h",
+        "ZYBHybrid/Core/Classes/**/*"
+      ],
+      "resources": "ZYBHybrid/Core/Resources/*.bundle",
+      "libraries": "xml2",
+      "pod_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": "$(SDK_DIR)/usr/include/libxml2"
+      },
+      "dependencies": {
+        "ZYBLogKit": [
+
+        ],
+        "ZYBBaseClass": [
+
+        ],
+        "YYCategories": [
+
+        ],
+        "YYModel": [
+
+        ]
+      }
+    }
+  ]
+}

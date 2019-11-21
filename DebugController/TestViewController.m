@@ -12,12 +12,95 @@
 #import "NetWorkingManager.h"
 #import "UIView+Debug_Additions.h"
 #import "DebugAlertView.h"
+#import <FastDevTools/HybridDebuggerMessageDispatch.h>
+
+//#import <ZYBHybrid/ZYBBaseWebViewController.h>
+//#import <ZYBHybrid/ZYBBaseWKWebView+PluginList.h>
+//#import <YYModel/YYModel.h>
 
 @interface TestViewController ()
 
 @end
 
 @implementation TestViewController
+
+- (void)pushDebuger {
+    DebugController *debugVC = [DebugController new];
+    debugVC.UIDStr = @"123456";
+    __weak typeof(debugVC) debugVC_weak = debugVC;
+    
+    debugVC.hostChangeBlock = ^{ //环境切换回调
+        [DebugAlertView createAlertWithTitle:@"环境切换" content:@"可以配置也可以手动输入域名" textFieldPlaceorder: @"例如：https://www.zybang.com" hostPrefixBtnStrArr:@[@"test", @"qatest", @"phptest"] hostNameBtnStrArr:@[@".suanshubang.com", @".zybang.com"] bottomBtnStrArr:@[@"取消", @"确定"] bottomBtnTouchedHandler:^(NSInteger index, NSString *inputStr) {
+            if (index == 1) {
+                debugVC_weak.hostName = inputStr;
+                NSLog(@"最终的host为:%@", inputStr);
+            }
+        }];
+    };
+    
+    debugVC.tipsStateChangeBlock = ^(BOOL state) { //Tip服务器状态回调
+        NSLog(@"当前Tip服务器状态:%@", state ? @"已打开" : @"已关闭");
+    };
+    
+//    [HybridDebuggerMessageDispatch sharedInstance].block = ^WKWebView *(NSString * _Nonnull action, NSDictionary * _Nonnull param) {
+//        ZYBWebFeatureManager *config = [[ZYBWebFeatureManager alloc] init];
+//        config.hideNavBar = NO;
+//        config.hideStatusBar = NO;
+//        config.staBarStyle = 0;
+//        
+//        BOOL is_Core_OpenWindow = NO;
+//        id codeStr = [param objectForKey:@"code"];
+//        id urlStr = [param objectForKey:@"pageUrl"];
+//        if ([codeStr isKindOfClass:[NSString class]] || [urlStr isKindOfClass:[NSString class]]) {
+//            is_Core_OpenWindow = ([codeStr containsString:@"core_openWindow"] && [codeStr containsString:@"pageUrl"]) || ([action isEqualToString:@"core_openWindow"] && [urlStr hasPrefix:@"http"]);
+//        }
+//        if (is_Core_OpenWindow) {
+//            if ([action isEqualToString:@"core_openWindow"]) {
+//                config = [ZYBWebFeatureManager yy_modelWithDictionary:param];
+//                NSMutableDictionary *shareDic = [NSMutableDictionary dictionary];
+//                [shareDic setValue:@"core_share" forKey:@"action"];
+//                [shareDic setValue:[param objectForKey:@"shareData"] forKey:@"param"];
+//                config.shareData = [shareDic yy_modelToJSONString];
+//            }
+//
+//        }
+//
+//        ZYBBaseWebViewController *sam = [[ZYBBaseWebViewController alloc] initWithFeatureConfig:config];
+//        if (is_Core_OpenWindow) {
+//            if ([action isEqualToString:@"eval"]) { // 切割字符串取 pageURL 的值
+//                NSString *str1 = [codeStr componentsSeparatedByString:@"pageUrl"][1];
+//                if ([str1 containsString:@"\""]) {
+//                    urlStr = [str1 componentsSeparatedByString:@"\""][1];
+//                }
+//            }
+//            sam.urlString = [urlStr hasPrefix:@"http"] ? urlStr : @"https://www.baidu.com";
+//
+//        } else {
+//            sam.urlString = @"https://www.baidu.com";
+//        }
+//
+//        UIViewController *topViewController = [[self class] getCurrentVC];
+//        if (!topViewController.navigationController) {
+//            UIWindow *win = [UIApplication sharedApplication].keyWindow;
+//            win.rootViewController = sam;
+//            NSLog(@"Warning, 连 navigation 都没有？");
+//        } else {
+//            [topViewController.navigationController pushViewController:sam animated:YES];
+//        }
+//        topViewController = sam;
+//        return sam.webView;
+//    };
+//
+//    [HybridDebuggerMessageDispatch sharedInstance].listBlock = ^NSDictionary *(WKWebView *veryWebView){
+//        return [(ZYBBaseWKWebView *)veryWebView getPluginAndActionsList];
+//    };
+//
+//    [HybridDebuggerMessageDispatch sharedInstance].aboutBlock = ^Class(WKWebView * _Nonnull veryWebView, NSString * _Nonnull actionName) {
+//        return [(ZYBBaseWKWebView *)veryWebView getClassForSignature:actionName];
+//    };
+    
+    [self.navigationController pushViewController:debugVC animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -148,24 +231,7 @@
 
 }
 
-- (void)pushDebuger {
-    DebugController *debugVC = [DebugController new];
-//    debugVC.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate window].rootViewController;
-    debugVC.UIDStr = @"123456";
-    __weak typeof(debugVC) debugVC_weak = debugVC;
-    debugVC.hostChangeBlock = ^{
-        [DebugAlertView createAlertWithTitle:@"环境切换" content:@"可以配置也可以手动输入域名" textFieldPlaceorder: @"例如：https://www.zybang.com" hostPrefixBtnStrArr:@[@"test", @"qatest", @"phptest"] hostNameBtnStrArr:@[@".suanshubang.com", @".zybang.com"] bottomBtnStrArr:@[@"取消", @"确定"] bottomBtnTouchedHandler:^(NSInteger index, NSString *inputStr) {
-            if (index == 1) {
-//                [ZYBHideConfigModel sharedInstance].debugAddress = alert.inputString;
-//                [ZYBSocketService changeSocketHost:alert.inputString];
-//                [[ZYBHideConfigModel sharedInstance] save];
-                debugVC_weak.hostName = inputStr;
-                NSLog(@"最终的host为:%@", inputStr);
-            }
-        }];
-    };
-    [self.navigationController pushViewController:debugVC animated:YES];
-}
+
 
 
 @end

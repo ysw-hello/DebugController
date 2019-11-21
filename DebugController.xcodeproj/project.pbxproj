@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0ABB0D52F5E98CC6011F26DB /* Pods_DebugController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590A224907DBF8342FB9034E /* Pods_DebugController.framework */; };
+		9F4C8ECD8D124E0B32BE44BA /* libPods-DebugController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5096E257616D6D909B5AD258 /* libPods-DebugController.a */; };
 		E80A59D12111B220007132F3 /* UIImage+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = E80A59CF2111B220007132F3 /* UIImage+Compression.m */; };
 		E80A59D22111B220007132F3 /* NetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E80A59D02111B220007132F3 /* NetWorkingManager.m */; };
 		E80A59D82112ACBA007132F3 /* Aspects_Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E80A59D72112ACBA007132F3 /* Aspects_Debug.m */; };
@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5096E257616D6D909B5AD258 /* libPods-DebugController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DebugController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		531BDC7FDC1D5FFF2146E8EC /* Pods-DebugController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugController.release.xcconfig"; path = "Pods/Target Support Files/Pods-DebugController/Pods-DebugController.release.xcconfig"; sourceTree = "<group>"; };
-		590A224907DBF8342FB9034E /* Pods_DebugController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7FC9A8A91D38ED21EE4FE5 /* Pods-DebugController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DebugController/Pods-DebugController.debug.xcconfig"; sourceTree = "<group>"; };
 		E80A59CD2111B220007132F3 /* UIImage+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compression.h"; sourceTree = "<group>"; };
 		E80A59CE2111B220007132F3 /* NetWorkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkingManager.h; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8313B5821C10BD200393639 /* libresolv.tbd in Frameworks */,
-				0ABB0D52F5E98CC6011F26DB /* Pods_DebugController.framework in Frameworks */,
+				9F4C8ECD8D124E0B32BE44BA /* libPods-DebugController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E8313B5721C10BD100393639 /* libresolv.tbd */,
-				590A224907DBF8342FB9034E /* Pods_DebugController.framework */,
+				5096E257616D6D909B5AD258 /* libPods-DebugController.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 				E8B5BAC8210EC2E8004EE296 /* Sources */,
 				E8B5BAC9210EC2E8004EE296 /* Frameworks */,
 				E8B5BACA210EC2E8004EE296 /* Resources */,
-				82CB16222C351A93DF189CA3 /* [CP] Embed Pods Frameworks */,
+				26F96CD32F68F99D849901C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,7 +255,7 @@
 		E8B5BAC4210EC2E8004EE296 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = com.ysw;
 				TargetAttributes = {
 					E8B5BACB210EC2E8004EE296 = {
@@ -322,28 +322,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		82CB16222C351A93DF189CA3 /* [CP] Embed Pods Frameworks */ = {
+		26F96CD32F68F99D849901C8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DebugController/Pods-DebugController-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/FastDevTools/FastDevTools.framework",
-				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-DebugController/Pods-DebugController-resources.sh",
+				"${PODS_ROOT}/../../FastDevTools/DebugManager/WebServer/WebDebugger/Resources/HybridDebugger.bundle",
+				"${PODS_ROOT}/GCDWebServer/GCDWebUploader/GCDWebUploader.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastDevTools.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HybridDebugger.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GCDWebUploader.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DebugController/Pods-DebugController-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DebugController/Pods-DebugController-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F05E91899C392B551F924250 /* [CP] Check Pods Manifest.lock */ = {
@@ -445,6 +441,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -452,6 +449,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -500,6 +498,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -507,6 +506,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -14,9 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - FastDevTools/CustomTextField (0.9.6)
-  - FastDevTools/DebugFlex (0.9.6)
-  - FastDevTools/DebugManager (0.9.6):
+  - FastDevTools/CustomTextField (0.9.7)
+  - FastDevTools/DebugFlex (0.9.7):
+    - FastDevTools/DebugManager
+  - FastDevTools/DebugManager (0.9.7):
     - AFNetworking
     - FastDevTools/CustomTextField
     - FMDB
@@ -50,10 +51,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  FastDevTools: 392c90a56c1bf1bd69213713d812c87847729b2e
+  FastDevTools: 5628359014c044a48e6ab444e1acd14a074a4a93
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
 
-PODFILE CHECKSUM: 134a83b612c61f39c20482ca5b3949875c7e8231
+PODFILE CHECKSUM: 8c4d196be7ea61a11a87b26606fdb7fac42c4417
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.4
