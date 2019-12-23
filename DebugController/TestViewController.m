@@ -7,11 +7,12 @@
 //
 
 #import "TestViewController.h"
-#import "DebugController.h"
 #import "AppDelegate.h"
 #import "NetWorkingManager.h"
-#import "UIView+Debug_Additions.h"
-#import "DebugAlertView.h"
+
+#import <FastDevTools/UIView+Debug_Additions.h>
+#import <FastDevTools/DebugAlertView.h>
+#import <FastDevTools/DebugController.h>
 #import <FastDevTools/HybridDebuggerMessageDispatch.h>
 
 //#import <ZYBHybrid/ZYBBaseWebViewController.h>
@@ -23,6 +24,26 @@
 @end
 
 @implementation TestViewController
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        [self pushDebuger];
+    }
+}
 
 - (void)pushDebuger {
     DebugController *debugVC = [DebugController new];
@@ -109,7 +130,6 @@
     
     [self testRequest_Get];
     [self testRequest_Post];
-    [self testDebuger];
 }
 
 - (void)testRequest_Get {
@@ -119,13 +139,6 @@
 - (void)testRequest_Post {
     [self creatButtonWithFrame:CGRectMake(10, 200, self.view.width - 20, 50) selector:@selector(startPostRequest) title:@"触发POST请求"];
 }
-
-- (void)testDebuger {
-    [self creatButtonWithFrame:CGRectMake(10, self.view.bounds.size.height - 65, self.view.bounds.size.width - 20, 50) selector:@selector(pushDebuger) title:@"潘多拉魔盒"];
-}
-
-
-
 
 - (UIButton *)creatButtonWithFrame:(CGRect)frame selector:(SEL)selector title:(NSString *)title {
     UIButton *button = [[UIButton alloc] initWithFrame:frame];
