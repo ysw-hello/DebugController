@@ -14,47 +14,68 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - FastDevTools/CustomTextField (0.9.7)
-  - FastDevTools/DebugFlex (0.9.7):
+  - FastDevTools/APMRecord (1.1.0):
+    - YYModel
+  - FastDevTools/CustomTextField (1.1.0)
+  - FastDevTools/DebugFlex (1.1.0):
     - FastDevTools/DebugManager
-  - FastDevTools/DebugManager (0.9.7):
+  - FastDevTools/DebugManager (1.1.0):
     - AFNetworking
+    - FastDevTools/APMRecord
     - FastDevTools/CustomTextField
     - FMDB
     - GCDWebServer
     - GCDWebServer/WebDAV
     - GCDWebServer/WebUploader
+    - YYCategories
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - GCDWebServer (3.5.2):
-    - GCDWebServer/Core (= 3.5.2)
-  - GCDWebServer/Core (3.5.2)
-  - GCDWebServer/WebDAV (3.5.2):
+  - GCDWebServer (3.5.3):
+    - GCDWebServer/Core (= 3.5.3)
+  - GCDWebServer/Core (3.5.3)
+  - GCDWebServer/WebDAV (3.5.3):
     - GCDWebServer/Core
-  - GCDWebServer/WebUploader (3.5.2):
+  - GCDWebServer/WebUploader (3.5.3):
     - GCDWebServer/Core
+  - MLeaksFinder (1.0.0)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - FastDevTools/DebugFlex (from `../FastDevTools`)
   - FastDevTools/DebugManager (from `../FastDevTools`)
+  - GCDWebServer/Core (from `../GCDWebServer`)
+  - GCDWebServer/WebDAV (from `../GCDWebServer`)
+  - GCDWebServer/WebUploader (from `../GCDWebServer`)
+  - MLeaksFinder (from `../MLeaksFinder`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FMDB
-    - GCDWebServer
+    - YYCategories
+    - YYModel
 
 EXTERNAL SOURCES:
   FastDevTools:
     :path: "../FastDevTools"
+  GCDWebServer:
+    :path: "../GCDWebServer"
+  MLeaksFinder:
+    :path: "../MLeaksFinder"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  FastDevTools: 5628359014c044a48e6ab444e1acd14a074a4a93
+  FastDevTools: 1c278342274265260700f16b39df8ed6a244a68f
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
+  GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
+  MLeaksFinder: 89eb3142bf1bbd0a3d1849543b629399c5da74c5
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 8c4d196be7ea61a11a87b26606fdb7fac42c4417
+PODFILE CHECKSUM: b2ef9129882e9f8ab6825b6c3b7007acc8a00437
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.9.1

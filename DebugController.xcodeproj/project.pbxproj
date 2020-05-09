@@ -12,6 +12,9 @@
 		E80A59D22111B220007132F3 /* NetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E80A59D02111B220007132F3 /* NetWorkingManager.m */; };
 		E80A59D82112ACBA007132F3 /* Aspects_Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E80A59D72112ACBA007132F3 /* Aspects_Debug.m */; };
 		E8313B5821C10BD200393639 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E8313B5721C10BD100393639 /* libresolv.tbd */; };
+		E849133424658B8C00632A7C /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E849133324658B8C00632A7C /* ExternalAccessory.framework */; };
+		E849133624658E0E00632A7C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E849133524658E0E00632A7C /* NetworkExtension.framework */; };
+		E8491338246591AA00632A7C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8491337246591AA00632A7C /* CoreLocation.framework */; };
 		E8B5BAD1210EC2E8004EE296 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B5BAD0210EC2E8004EE296 /* AppDelegate.m */; };
 		E8B5BAD7210EC2E8004EE296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B5BAD5210EC2E8004EE296 /* Main.storyboard */; };
 		E8B5BAD9210EC2E8004EE296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B5BAD8210EC2E8004EE296 /* Assets.xcassets */; };
@@ -50,6 +53,10 @@
 		E80A59D62112ACBA007132F3 /* Aspects_Debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aspects_Debug.h; sourceTree = "<group>"; };
 		E80A59D72112ACBA007132F3 /* Aspects_Debug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aspects_Debug.m; sourceTree = "<group>"; };
 		E8313B5721C10BD100393639 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		E849133224658B8C00632A7C /* DebugController.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugController.entitlements; sourceTree = "<group>"; };
+		E849133324658B8C00632A7C /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		E849133524658E0E00632A7C /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		E8491337246591AA00632A7C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E8B5BACC210EC2E8004EE296 /* DebugController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebugController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B5BACF210EC2E8004EE296 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8B5BAD0210EC2E8004EE296 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8491338246591AA00632A7C /* CoreLocation.framework in Frameworks */,
+				E849133424658B8C00632A7C /* ExternalAccessory.framework in Frameworks */,
+				E849133624658E0E00632A7C /* NetworkExtension.framework in Frameworks */,
 				E8313B5821C10BD200393639 /* libresolv.tbd in Frameworks */,
 				9F4C8ECD8D124E0B32BE44BA /* libPods-DebugController.a in Frameworks */,
 			);
@@ -98,6 +108,9 @@
 		B2EA0C4A9CE07287ECD02059 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8491337246591AA00632A7C /* CoreLocation.framework */,
+				E849133524658E0E00632A7C /* NetworkExtension.framework */,
+				E849133324658B8C00632A7C /* ExternalAccessory.framework */,
 				E8313B5721C10BD100393639 /* libresolv.tbd */,
 				5096E257616D6D909B5AD258 /* libPods-DebugController.a */,
 			);
@@ -158,6 +171,7 @@
 		E8B5BACE210EC2E8004EE296 /* DebugController */ = {
 			isa = PBXGroup;
 			children = (
+				E849133224658B8C00632A7C /* DebugController.entitlements */,
 				E8B5BACF210EC2E8004EE296 /* AppDelegate.h */,
 				E8B5BAD0210EC2E8004EE296 /* AppDelegate.m */,
 				E8B5BB222110575D004EE296 /* TestViewController.h */,
@@ -329,11 +343,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DebugController/Pods-DebugController-resources.sh",
+				"${PODS_ROOT}/../../FastDevTools/APMRecord/Resources/APM_VCBlackList.bundle",
 				"${PODS_ROOT}/../../FastDevTools/DebugManager/WebServer/WebDebugger/Resources/HybridDebugger.bundle",
-				"${PODS_ROOT}/GCDWebServer/GCDWebUploader/GCDWebUploader.bundle",
+				"${PODS_ROOT}/../../GCDWebServer/GCDWebUploader/GCDWebUploader.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/APM_VCBlackList.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HybridDebugger.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GCDWebUploader.bundle",
 			);
@@ -540,12 +556,13 @@
 			baseConfigurationReference = 6D7FC9A8A91D38ED21EE4FE5 /* Pods-DebugController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DebugController/DebugController.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4FX4F26GS;
+				DEVELOPMENT_TEAM = Z2K59M4MPU;
 				INFOPLIST_FILE = DebugController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zuoyebang.DebugController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fastdev.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -556,12 +573,13 @@
 			baseConfigurationReference = 531BDC7FDC1D5FFF2146E8EC /* Pods-DebugController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DebugController/DebugController.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4FX4F26GS;
+				DEVELOPMENT_TEAM = Z2K59M4MPU;
 				INFOPLIST_FILE = DebugController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zuoyebang.DebugController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fastdev.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
