@@ -53,7 +53,7 @@ DEPENDENCIES:
   - MLeaksFinder (from `../MLeaksFinder`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AFNetworking
     - FMDB
     - YYCategories
@@ -76,6 +76,6 @@ SPEC CHECKSUMS:
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b2ef9129882e9f8ab6825b6c3b7007acc8a00437
+PODFILE CHECKSUM: 532bf178f46f1cdab958ff194fa98da23dd86b49
 
 COCOAPODS: 1.9.1

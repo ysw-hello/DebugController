@@ -1,4 +1,3 @@
-source 'https://github.com/CocoaPods/Specs.git'
 
 install! 'cocoapods', :generate_multiple_pod_projects => true, :incremental_installation => false
 
